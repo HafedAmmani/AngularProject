@@ -1,0 +1,45 @@
+<br>
+
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid col-md-10">
+        <table class="table table-striped" >
+            <thead style="background-color: ;">
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">category</th>
+                  <th scope="col">rate</th>
+                </tr>
+              </thead>
+              <tbody>
+            <tr *ngFor="let m of movies">
+        
+                <td>
+                    {{m.id}}
+                </td>
+                <td>
+                    {{m.title}}
+                </td>
+                <td>
+                    {{m.duree}}
+                </td>
+                <td>
+                    {{m.categorie}}
+                </td>
+                <td>
+                    {{m.rate}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    
+</div>
