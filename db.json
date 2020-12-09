@@ -19,7 +19,7 @@
   "movies": [
     {
       "id": 1,
-      "title": "name",
+      "title": "Rampage",
       "duree": 2,
       "categorie": "adventure",
       "rate": 6
@@ -30,6 +30,13 @@
       "categorie": "testing",
       "rate": 2,
       "id": 3
+    },
+    {
+      "title": " Black Panther",
+      "categorie": "adventure",
+      "duree": 2,
+      "rate": 8,
+      "id": 4
     }
   ]
 }

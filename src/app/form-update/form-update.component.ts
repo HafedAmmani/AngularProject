@@ -31,5 +31,4 @@ export class FormUpdateComponent implements OnInit {
   updateMovies(){
     this.ms.updateProduct(Number(this.paramId),this.m).subscribe(res=>this._router.navigateByUrl("/afficher"));
   }
-
 }

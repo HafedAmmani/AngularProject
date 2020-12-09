@@ -10,6 +10,7 @@ import { MoviesService } from '../services/movies.service';
 export class MoviesListComponent implements OnInit {
 
   movies : movies[];
+  m : movies[];
   columns : any;
 
   constructor(private ps: MoviesService) { }

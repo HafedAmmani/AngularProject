@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddMoviesComponent } from './add-movies/add-movies.component';
 import { FormUpdateComponent } from './form-update/form-update.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { GridcartComponent } from './gridcart/gridcart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormUpdateComponent } from './form-update/form-update.component';
     MoviesListComponent,
     GridComponent,
     AddMoviesComponent,
-    FormUpdateComponent
+    FormUpdateComponent,
+    HomePageComponent,
+    GridcartComponent
   ],
   imports: [
     BrowserModule,
