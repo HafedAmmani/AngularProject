@@ -16,19 +16,20 @@
   "profile": {
     "name": "typicode"
   },
-  "movies":[{
-    "id": 1,
-    "title" : "name",
-    "duree":2,
-    "categorie":"adventure",
-    "rate": 4
-  },
-  {
-    "id": 2,
-    "title" : "name2",
-    "duree":2,
-    "categorie":"adventure",
-    "rate": 4
-  }
-]
+  "movies": [
+    {
+      "id": 1,
+      "title": "name",
+      "duree": 2,
+      "categorie": "adventure",
+      "rate": 6
+    },
+    {
+      "title": "azd",
+      "duree": 2,
+      "categorie": "testing",
+      "rate": 2,
+      "id": 3
+    }
+  ]
 }

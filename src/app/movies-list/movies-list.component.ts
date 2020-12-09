@@ -16,11 +16,7 @@ export class MoviesListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.ps.getMoviesJson().subscribe(next=>this.movies=next);
-
-
-
-    
+    this.ps.getMoviesJson().subscribe(next=>this.movies=next); 
   }
 
 }

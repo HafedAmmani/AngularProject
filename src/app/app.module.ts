@@ -9,6 +9,7 @@ import { GridComponent } from './grid/grid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddMoviesComponent } from './add-movies/add-movies.component';
+import { FormUpdateComponent } from './form-update/form-update.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddMoviesComponent } from './add-movies/add-movies.component';
     HeaderComponent,
     MoviesListComponent,
     GridComponent,
-    AddMoviesComponent
+    AddMoviesComponent,
+    FormUpdateComponent
   ],
   imports: [
     BrowserModule,
