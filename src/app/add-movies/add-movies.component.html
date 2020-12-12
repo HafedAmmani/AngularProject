@@ -14,30 +14,42 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="title">Title</label>
-                  <input type="text" class="form-control" id="title" formControlName="title" [(ngModel)]="m.title">
+                  <input type="text" class="form-control" id="title" formControlName="title" [(ngModel)]="m.title" >
+                  <div *ngIf="moviesform.get('title').invalid">
+                    <div  *ngIf="moviesform.get('title').touched && moviesform.get('title').errors.required" class="alert alert-danger"> Title Required  </div>
                 </div>
-              </div>
+                </div>
+            </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="categorie">Category</label>
                 <input type="text" class="form-control" id="categorie" formControlName="categorie" [(ngModel)]="m.categorie" >
+                <div *ngIf="moviesform.get('categorie').invalid">
+                  <div  *ngIf="moviesform.get('categorie').touched && moviesform.get('categorie').errors.required" class="alert alert-danger"> Category Required  </div>
+              </div>
               </div>
             </div>
             
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="time">Time</label>
-                <input type="number" class="form-control" id="time" formControlName="duree" [(ngModel)]="m.duree" >
+                <input type="number" class="form-control" id="time" formControlName="duree" [(ngModel)]="m.duree" min="0">
+                <div *ngIf="moviesform.get('duree').invalid">
+                  <div  *ngIf="moviesform.get('duree').touched && moviesform.get('duree').errors.required" class="alert alert-danger"> Time Required  </div>
+              </div>
               </div>
               
               <div class="form-group col-md-4">
                 <label for="rate">Rate</label>
-                <input type="number" class="form-control" id="rate" formControlName="rate" [(ngModel)]="m.rate">
+                <input type="number" class="form-control" id="rate" formControlName="rate" [(ngModel)]="m.rate" min="0">
+                <div *ngIf="moviesform.get('rate').invalid">
+                  <div  *ngIf="moviesform.get('rate').touched && moviesform.get('rate').errors.required" class="alert alert-danger"> rate Required  </div>
+              </div>
               </div>
             </div>
             
             <button type="submit" (click)="addMovies()" class="btn btn-success mr-2">Add movie</button>
-            <button type="submit" (click)="resetControls()" class="btn btn-info mr-2">Reset Controls</button>
+            <button type="submit" (click)="resetControls()" class="btn btn-info mr-2">Reset</button>
             
           </form>
         </div>
