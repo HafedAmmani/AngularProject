@@ -16,9 +16,14 @@ export class GridComponent implements OnInit {
   constructor(private ms : MoviesService, private _router:Router) { }
 
   ngOnInit(): void {
+    this.ms.getMoviesJson().subscribe((data : movies[])=>{
+      this.Movies = data;
+    })
   }
   deleteMovies(m:movies){
-    this.ms.deleteProduct(m).subscribe(next=>this.ms.getMoviesJson().subscribe(next=>this.Movies=next));
+    this.ms.deleteProduct(m).subscribe(res => {
+      
+    });
   }
   
 

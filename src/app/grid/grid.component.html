@@ -62,7 +62,7 @@
       <div class="col-sm-6 col-xs-6" *ngFor="let m of movies">
         <div class="list mb-2">
             <div class="list-header">
-                <a href="single-movie.html" class="list-header-image">
+                <a [routerLink]="['/afficher/detail', m.id ]" class="list-header-image">
               <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wCvTSaIQEweNdsU98usvt9re7fq.jpg">
             </a>
             </div>

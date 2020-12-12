@@ -12,6 +12,8 @@ import { AddMoviesComponent } from './add-movies/add-movies.component';
 import { FormUpdateComponent } from './form-update/form-update.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { GridcartComponent } from './gridcart/gridcart.component';
+import { DetailComponent } from './detail/detail.component';
+import { WeatherWidgetMainComponent } from './weather-widget-main/weather-widget-main.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { GridcartComponent } from './gridcart/gridcart.component';
     AddMoviesComponent,
     FormUpdateComponent,
     HomePageComponent,
-    GridcartComponent
+    GridcartComponent,
+    DetailComponent,
+    WeatherWidgetMainComponent
   ],
   imports: [
     BrowserModule,
