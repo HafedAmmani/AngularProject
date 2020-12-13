@@ -12,6 +12,9 @@ export class GridComponent implements OnInit {
   
   @Input() movies: movies;
   Movies : movies[];
+  
+
+
 
   constructor(private ms : MoviesService, private _router:Router) { }
 

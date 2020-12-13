@@ -1,16 +1,6 @@
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Movies</li>
-    </ol>
-</nav>
-<div class="page-wrapper">
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid col-md-10">
+
         <table class="table table-striped" >
-            <thead style="background-color: ;">
+            <thead style="background-color: #c61bb2 ;">
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Title</th>
@@ -47,12 +37,7 @@
             </tbody>
         </table>
 
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    
-</div>
+
 
 <div class="container">
     <div class="alert alert-primary" role="alert">
@@ -69,7 +54,7 @@
             <div class="list-content" >
                 <h2><a href="single-movie.html" class="text-black">{{m.title}}</a></h2>
                 <span class="list-meta">
-              <span class="list-meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i> {{m.duree}}h</span>
+              <span class="list-meta-item"><i class="fa fa-clock" aria-hidden="true"></i> {{m.duree}}h</span>
                 <i class="fa fa-star"></i> {{m.rate}}
                 </span>
                 <p>As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos.</p>

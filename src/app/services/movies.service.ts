@@ -30,7 +30,6 @@ export class MoviesService {
     getMoviesById(id:number){
       return this.http.get<movies>(this.urlMovies+'/'+id);
     }
-
     updateProduct (id:number,movies: movies): Observable<movies> {
       return this.http.put<movies>(this.urlMovies+'/'+id, movies, this.httpOptions);}
 
@@ -39,4 +38,5 @@ export class MoviesService {
         const url=this.urlMovies+'/'+id;
         return this.http.delete<movies>(url);
         }
+        
 }

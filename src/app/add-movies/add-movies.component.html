@@ -14,7 +14,7 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="title">Title</label>
-                  <input type="text" class="form-control" id="title" formControlName="title" [(ngModel)]="m.title" >
+                  <input type="text" [ngClass]="moviesform.get('title').valid ? 'form-control is-valid' : 'form-control' " class="form-control" id="title" formControlName="title" [(ngModel)]="m.title" >
                   <div *ngIf="moviesform.get('title').invalid">
                     <div  *ngIf="moviesform.get('title').touched && moviesform.get('title').errors.required" class="alert alert-danger"> Title Required  </div>
                 </div>
@@ -23,7 +23,7 @@
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="categorie">Category</label>
-                <input type="text" class="form-control" id="categorie" formControlName="categorie" [(ngModel)]="m.categorie" >
+                <input type="text" [ngClass]="moviesform.get('categorie').valid ? 'form-control is-valid' : 'form-control' " class="form-control" id="categorie" formControlName="categorie" [(ngModel)]="m.categorie" >
                 <div *ngIf="moviesform.get('categorie').invalid">
                   <div  *ngIf="moviesform.get('categorie').touched && moviesform.get('categorie').errors.required" class="alert alert-danger"> Category Required  </div>
               </div>
@@ -33,7 +33,7 @@
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="time">Time</label>
-                <input type="number" class="form-control" id="time" formControlName="duree" [(ngModel)]="m.duree" min="0">
+                <input type="number" [ngClass]="moviesform.get('duree').valid ? 'form-control is-valid' : 'form-control' " class="form-control" id="time" formControlName="duree" [(ngModel)]="m.duree" min="0">
                 <div *ngIf="moviesform.get('duree').invalid">
                   <div  *ngIf="moviesform.get('duree').touched && moviesform.get('duree').errors.required" class="alert alert-danger"> Time Required  </div>
               </div>
@@ -41,14 +41,14 @@
               
               <div class="form-group col-md-4">
                 <label for="rate">Rate</label>
-                <input type="number" class="form-control" id="rate" formControlName="rate" [(ngModel)]="m.rate" min="0">
+                <input type="number" [ngClass]="moviesform.get('rate').valid ? 'form-control is-valid' : 'form-control' " class="form-control" id="rate" formControlName="rate" [(ngModel)]="m.rate" min="0">
                 <div *ngIf="moviesform.get('rate').invalid">
                   <div  *ngIf="moviesform.get('rate').touched && moviesform.get('rate').errors.required" class="alert alert-danger"> rate Required  </div>
               </div>
               </div>
             </div>
             
-            <button type="submit" (click)="addMovies()" class="btn btn-success mr-2">Add movie</button>
+            <button type="submit" [disabled]="moviesform.invalid" (click)="addMovies()" class="btn btn-success mr-2">Add movie</button>
             <button type="submit" (click)="resetControls()" class="btn btn-info mr-2">Reset</button>
             
           </form>
@@ -61,4 +61,34 @@
     </div>
   </div>
 <br><br>
+<div class="movie-buttons text-center">
+
+  <div class="container">
+    <div class="col-sm-6 col-xs-6">
+    <div class="alert alert-primary" role="alert">
+        <i class="fa fa-eye"></i> Live Preview
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-xs-6">
+        <div class="list mb-2">
+            <div class="list-header">
+                <a [routerLink]="['/afficher/detail', m.id ]" class="list-header-image">
+              <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wCvTSaIQEweNdsU98usvt9re7fq.jpg">
+            </a>
+            </div>
+            <div class="list-content" >
+                <h2><a href="single-movie.html" class="text-black">{{m.title}}</a></h2>
+                <span class="list-meta">
+              <span class="list-meta-item"><i class="fa fa-clock" aria-hidden="true"></i> {{m.duree}}h</span>
+                <i class="fa fa-star"></i> {{m.rate}}
+                </span>
+                <p>As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+  
+</div>
   

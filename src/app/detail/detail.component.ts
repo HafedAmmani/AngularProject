@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { movies } from '../model/movies';
 import { MoviesService } from '../services/movies.service';
 
@@ -10,12 +10,17 @@ import { MoviesService } from '../services/movies.service';
 })
 export class DetailComponent implements OnInit {
   valId : string;
-  constructor(private ar : ActivatedRoute, private ms:MoviesService) { 
+  id: number;
+  movie : movies;
+  constructor(private ar : ActivatedRoute, private ms:MoviesService,private router: Router) { 
     this.ar.paramMap.subscribe(res=>this.valId=res.get('id'), erreur=>console.log("erreur"), ()=>console.log("finish"));
   }
 
-  m : movies = new movies();
   ngOnInit(): void {
+    this.id = this.ar.snapshot.params['postId'];
+    this.ms.getMoviesById(Number(this.valId)).subscribe((data: movies)=>{
+      this.movie = data;
+    });
   }
 
 }

@@ -19,7 +19,7 @@
   "movies": [
     {
       "id": 1,
-      "title": "Rampageupdate",
+      "title": "Rampage",
       "duree": 2,
       "categorie": "adventure",
       "rate": 6
@@ -30,6 +30,13 @@
       "duree": 2,
       "rate": 8,
       "id": 4
+    },
+    {
+      "title": "test",
+      "categorie": "action",
+      "duree": 2,
+      "rate": 7,
+      "id": 5
     }
   ]
 }
